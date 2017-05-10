@@ -12,9 +12,8 @@ class Matrix {
 	 * @return array							it return the matrix with the operation applied to all elements
 	 */
 	public function matrixOperation($operation, $matrix) {
-		// I commented the following check in order to emprove performance
-		//$allowed_op = ['relu', 'sigmoid', 'log', 'negative','tanh'];
-		//if (!in_array($operation, $allowed_op)) throw new Exception("The operation does not exist!");
+		$allowed_op = ['relu', 'sigmoid', 'log', 'negative','tanh'];
+		if (!in_array($operation, $allowed_op)) throw new Exception("The operation does not exist!");
 
 		$ret = [];
 
